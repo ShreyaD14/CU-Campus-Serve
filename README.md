@@ -50,7 +50,16 @@ The app will be available at [http://localhost:5173](http://localhost:5173).
 ## Demo Login Flow
 
 Use the quick-click buttons on the login screen, or enter one of these phone numbers (OTP is any 6 digits):
+
+**General Roles:**
 - **User**: `9000000004`
-- **Vendor**: `9000000002`
 - **Delivery**: `9000000003`
 - **Admin**: `9000000001`
+- **Generic Vendor**: `9000000002`
+
+**Specific Shop Vendors:**
+- **Deccan Dose**: `9000000011`
+- **Shanti Biryani**: `9000000012`
+- **Chai Sutta Bar**: `9000000013`
+- **Rajma Chawal Corner**: `9000000014`
+- **Punjabi Dhaba**: `9000000015`
