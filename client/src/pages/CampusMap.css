@@ -1,0 +1,85 @@
+.campus-map-page {
+  display: flex;
+  height: calc(100vh - var(--navbar-h));
+  position: relative;
+  overflow: hidden;
+  margin-top: var(--navbar-h);
+}
+
+.map-sidebar {
+  width: 320px;
+  background: var(--bg-elevated);
+  border-right: 1px solid var(--border);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  box-shadow: 2px 0 20px rgba(0,0,0,0.5);
+}
+
+.map-container-wrapper {
+  flex: 1;
+  height: 100%;
+}
+
+.map-filter-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  margin-bottom: 8px;
+  transition: background var(--transition);
+}
+
+.map-filter-item:hover {
+  background: var(--bg-hover);
+}
+
+.map-filter-item input {
+  accent-color: var(--primary);
+  width: 16px; height: 16px;
+  cursor: pointer;
+}
+
+.filter-color {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 2px solid rgba(255,255,255,0.8);
+}
+
+.filter-text {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Fix popup text color for dark mode UI overriding it */
+.leaflet-popup-content-wrapper {
+  color: #333 !important;
+}
+.custom-popup {
+  color: #333;
+}
+.custom-popup h3 {
+  color: #111;
+}
+
+@media (max-width: 768px) {
+  .campus-map-page {
+    flex-direction: column;
+  }
+  .map-sidebar {
+    width: 100%;
+    order: 2;
+    height: auto;
+    border-right: none;
+    border-top: 1px solid var(--border);
+    padding: 16px;
+  }
+  .map-container-wrapper {
+    order: 1;
+    min-height: 50vh;
+  }
+}

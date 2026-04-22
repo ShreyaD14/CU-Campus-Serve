@@ -1,0 +1,17 @@
+{
+  "name": "campusserve",
+  "version": "1.0.0",
+  "description": "CampusServe – Smart Campus Ordering & Delivery System for Chandigarh University",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "cd client && npm run dev",
+    "server": "cd server && node src/server.js",
+    "seed": "cd server && node src/seeds/runSeeds.js",
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install"
+  },
+  "keywords": ["campus", "food-ordering", "delivery", "chandigarh-university"],
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
